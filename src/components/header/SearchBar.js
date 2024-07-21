@@ -22,12 +22,14 @@ const SearchBar = () => {
   };
   return (
     <form className="search" action="submit" onSubmit={handlesubmit}>
-      <input
-        onChange={handlechange}
-        value={searchTxt}
-        type="text"
-        placeholder="search here....."
-      />
+      <div className="inp">
+        <input
+          onChange={handlechange}
+          value={searchTxt}
+          type="text"
+          placeholder="search here....."
+        />
+      </div>
       <button type="submit" className="click-btn">
         <IoSearch className="icon1" />
       </button>

@@ -37,9 +37,12 @@ nav {
   font-size: 22px;
 }
 
-.search input {
+.inp {
   width: 25vw;
-  height: 4.4vh;
+}
+.search input {
+  width: 100%;
+  padding: 0.5vw;
   border-radius: 12px;
   border: 1px solid black;
   padding-left: 15px;
