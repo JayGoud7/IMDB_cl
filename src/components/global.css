@@ -327,8 +327,12 @@ main {
     font-size: 14px;
   }
 
+  .inp {
+    width: 25vw;
+  }
+
   .search input {
-    width: 30vw;
+    width: 100%;
     height: 2.5vh;
     border-radius: 12px;
     border: 1px solid black;
@@ -390,7 +394,7 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
   }
   .cards_inner {
     width: 143px;
