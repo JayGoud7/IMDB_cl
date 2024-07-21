@@ -394,7 +394,7 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 8px;
   }
   .cards_inner {
     width: 143px;
@@ -498,5 +498,44 @@ main {
   }
   .about h2 {
     text-align: center;
+  }
+}
+@media screen and (max-width: 360px) {
+  main {
+    padding-top: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+
+  .img-div {
+    width: 148px;
+    height: 178px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .img-div img {
+    width: 100%;
+    height: 100%;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .cards_inner {
+    width: 163px;
+    height: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border: 0.5px solid rgb(169, 157, 157);
+    border-radius: 10px;
+    padding: 7px;
+    color: black;
+    gap: 3px;
+    text-decoration: none;
   }
 }
