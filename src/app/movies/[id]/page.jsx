@@ -1,4 +1,8 @@
-import { getMovieDetails, getSimilarMovies } from "@/src/utils/api";
+import {
+  getMovieDetails,
+  getSimilarMovies,
+  getTrendingMovies,
+} from "@/src/utils/api";
 import { ImFire } from "react-icons/im";
 
 import Link from "next/link";
@@ -14,7 +18,7 @@ const Detailpage = async ({ params }) => {
         <div className="img-div2">
           <Image
             src={`https://image.tmdb.org/t/p/original/${
-              MovieDetails.backdrop_path || MovieDetails.poster_path
+              MovieDetails.poster_path || MovieDetails.backdrop_path
             }`}
             width={220}
             height={330}
@@ -54,19 +58,25 @@ const Detailpage = async ({ params }) => {
       <div className="cards">
         {SimilarMovies.map((movie, index) => {
           return (
-            <div key={index} className="cards_inner">
+            <>
               <Link href={`/movies/${movie.id}`}>
-                <Image
-                  src={`https://image.tmdb.org/t/p/original/${
-                    movie.poster_path || movie.backdrop_path
-                  }`}
-                  width={220}
-                  height={330}
-                  alt="image-movies"
-                  priority={true}
-                />
+                <div className="cardsinner">
+                  <div key={index} className="imgdiv2">
+                    <Image
+                      src={`https://image.tmdb.org/t/p/original/${
+                        movie.backdrop_path || movie.poster_path
+                      }`}
+                      width={220}
+                      height={330}
+                      alt="image-movies"
+                      priority={true}
+                    />
+                  </div>
+
+                  <h4>{movie.title}</h4>
+                </div>
               </Link>
-            </div>
+            </>
           );
         })}
       </div>

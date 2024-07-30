@@ -22,7 +22,7 @@ const Navitems = () => {
         <Link
           key={index}
           href={item.pathname}
-          className={router.pathname === "/" ? "active" : "anc-h"}
+          className={router.pathname === "/" ? 'active' : "anc-h" }
         >
           {item.name}
         </Link>

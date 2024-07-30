@@ -7,6 +7,7 @@ import { BiSolidLike } from "react-icons/bi";
 
 const SearchResults = ({ qparams, movie }) => {
   const [filtered, setfiltered] = useState(movie);
+
   useEffect(() => {
     setfiltered(movie);
   }, [movie]);
@@ -27,7 +28,7 @@ const SearchResults = ({ qparams, movie }) => {
             <div className="img-div">
               <Image
                 src={`https://image.tmdb.org/t/p/original/${
-                  movie.poster_path || movie.backdrop_path
+                  movie.backdrop_path || movie.poster_path
                 }`}
                 alt="movieimg"
                 width={300}
